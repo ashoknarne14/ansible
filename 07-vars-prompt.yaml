@@ -1,10 +1,10 @@
 - name: vars from prompt
   hosts: web
   vars_prompt:
-    name: COURSE
-    prompt: Please enter the course name
-    name: Duration
-    prompt: please enter the duration
+    - name: COURSE
+      prompt: Please enter the course name
+    - name: Duration
+      prompt: please enter the duration
   tasks:
   - name: vars from prompt
     ansible.builtin.debug:
