@@ -3,4 +3,12 @@
   tasks:
   - name: play 01
     ansible.builtin.debug:
-    
+    msg: "I am from Play 1"
+
+
+- name: play 02
+  hosts: web
+  tasks:
+  - name: play 02
+    ansible.builtin.debug:
+    msg: "I am from Play 2"
