@@ -1,8 +1,8 @@
 - name: filters
   hosts: local
   connection: local
-  vars:
-    value: "Ramesh"
+  # vars:
+  #   value: "Ramesh"
   tasks:
   - name: filters
     ansible.builtin.debug:
