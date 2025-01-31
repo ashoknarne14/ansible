@@ -6,4 +6,4 @@
   tasks:
   - name: filters
     ansible.builtin.debug:
-      msg: "Hello {{value | default(Krishna) }}"
+      msg: "Hello {{value | default( 'Krishna') }}"
