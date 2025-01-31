@@ -19,3 +19,15 @@
       greeting: "Hello Ramesh"
     ansible.builtin.debug:
       msg: "{{greeting | upper }}"
+
+  - name: Get unique values
+    vars:
+      list: [1,2,3,4,5,6,7,4,3,2,1]
+    ansible.builtin.debug:
+      msg: "{{list | unique }}"
+
+  - name: Min and max numbers
+    vars:
+      list: [1,2,3,4,5,6,7,4,3,2,1,9,10]
+    ansible.builtin.debug:
+      msg: "Min: {{list | min }}, Max: {{list | max}}"
