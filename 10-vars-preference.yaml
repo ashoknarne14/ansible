@@ -14,8 +14,12 @@
       private: false
   tasks:
   - name: var preference
-    vars:
-      COURSE: "DevOps with AWS Task level"
-      Duration: "110 Hrs"
+    # vars:
+    #   COURSE: "DevOps with AWS Task level"
+    #   Duration: "110 Hrs"
     ansible.builtin.debug:
       msg: "I am learning {{COURSE}} and duration is {{Duration}}"
+
+#1. Command line/args
+#2. Task Level
+#3. 
