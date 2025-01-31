@@ -35,8 +35,8 @@
   - name: Convert list to dict
     vars:
       list: 
-       - {key:name, value:'DevOps with AWS'}
-       - {key:duration, value:'120hrs'}
+       - {key:'name', value:'DevOps with AWS'}
+       - {key:'duration', value:'120hrs'}
     ansible.builtin.debug:
       msg: "{{list | items2dict}}"
 
