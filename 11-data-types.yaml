@@ -1,0 +1,20 @@
+- name: Data Types
+  hosts: local
+  vars:
+    COURSE: "DeVOps with AWS"
+    Duration: 120
+    topics: # list
+      - Linux
+      - Ansible
+      - Terraform
+      - Docker
+      - Kubernetes
+    live: true
+    tools: # map
+      ci: Jenkins
+      cm: ansible
+      cloud: AWS
+  tasks:
+  - name: Data Types
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}} with Duration {{Duration}}, Topics are {{topics}} and live {{live}}, tools are {{tools}}"
