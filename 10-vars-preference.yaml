@@ -3,8 +3,8 @@
   vars:
     COURSE: "DevOps with AWS Play level"
     Duration: "100 Hrs"
-  vars_files:
-    - vars.yaml
+  # vars_files:
+  #   - vars.yaml
   vars_prompt:
     - name: COURSE
       prompt: Please enter the course
@@ -22,4 +22,4 @@
 
 #1. Command line/args
 #2. Task Level
-#3. 
+#3. File Level
