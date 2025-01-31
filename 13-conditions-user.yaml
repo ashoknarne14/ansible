@@ -1,0 +1,10 @@
+- name: User creation
+  hosts: web
+  become: yes
+  tasks:
+  - name: User creation
+    ansible.builtin.command: id expense
+    resgister: user
+  - name: Print user information
+    ansible.builtin.debug:
+      msg: "User info {{user}}"
