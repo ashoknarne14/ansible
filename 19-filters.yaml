@@ -1,8 +1,9 @@
 - name: filters
   hosts: local
+  connection: local
   vars:
-    name: "Ramesh"
+    value: "Ramesh"
   tasks:
   - name: filters
     ansible.builtin.debug:
-      msg: "Hello {{name | default(Krishna) }}"
+      msg: "Hello {{value | default(Krishna) }}"
