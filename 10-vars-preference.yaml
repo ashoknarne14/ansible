@@ -5,13 +5,13 @@
     Duration: "100 Hrs"
   # vars_files:
   #   - vars.yaml
-  vars_prompt:
-    - name: COURSE
-      prompt: Please enter the course
-      private: false
-    - name: Duration
-      prompt: Please enter the duration
-      private: false
+  # vars_prompt:
+  #   - name: COURSE
+  #     prompt: Please enter the course
+  #     private: false
+  #   - name: Duration
+  #     prompt: Please enter the duration
+  #     private: false
   tasks:
   - name: var preference
     # vars:
@@ -23,3 +23,4 @@
 #1. Command line/args
 #2. Task Level
 #3. File Level
+#4. Prompt Level
