@@ -1,0 +1,21 @@
+- name: Vars preference
+  hosts: web
+  vars:
+    COURSE: "DevOps with AWS Play level"
+    Duration: "100 Hrs"
+  vars_files:
+    - vars.yaml
+  vars_prompt:
+    - name: COURSE
+      prompt: Please enter the course
+      private: false
+    - name: Duration
+      prompt: Please enter the duration
+      private: false
+  tasks:
+  - name: var preference
+    vars:
+      COURSE: "DevOps with AWS Task level"
+      Duration: "110 Hrs"
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE}} and duration is {{Duration}}"
