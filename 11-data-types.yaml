@@ -1,5 +1,6 @@
 - name: Data Types
   hosts: local
+  connection: local # for local connection
   vars:
     COURSE: "DeVOps with AWS"
     Duration: 120
