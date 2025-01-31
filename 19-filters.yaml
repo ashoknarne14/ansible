@@ -7,3 +7,9 @@
   - name: filters
     ansible.builtin.debug:
       msg: "Hello {{value | default( 'Krishna') }}"
+
+  - name: convert to lower case
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{greeting | lower }}"
