@@ -1,5 +1,6 @@
 - name: gather facts
   hosts: web
+  become: yes
   tasks:
   - name: gather facts
     ansible.builtin.debug:
