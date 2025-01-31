@@ -4,7 +4,8 @@
   tasks:
   - name: User creation
     ansible.builtin.command: id expense
-    resgister: user
+    register: user
+
   - name: Print user information
     ansible.builtin.debug:
       msg: "User info {{user}}"
