@@ -16,5 +16,5 @@
       vpc_subnet_id: "{{subnet_id}}"
       instance_type: t2.micro
       security_group: "{{sg_id}}"
-      image_id: ami-123456
+      image_id: "{{ami_id}}"
     loop: "{{instances}}"
