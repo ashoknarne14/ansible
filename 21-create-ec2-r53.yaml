@@ -33,6 +33,6 @@
       type: A
       ttl: 1
       wait: true
-      value: "{{item.instances.private_ip_address}}"
+      value: "{{item.instances[0].private_ip_address}}"
       overwrite: true
     loop: "{{ec2_instances.results}}"
