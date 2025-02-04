@@ -11,6 +11,13 @@
     - backend
     - frontend
   tasks:
+  - name: install boto3 and botocore
+    ansible.builtin.pip:
+      name: 
+      - boto3
+      - botocore
+      executable: pip
+      
   - name: ec2 resource creation
     amazon.aws.ec2_instance:
       name: "{{item}}"
@@ -25,7 +32,7 @@
     ansible.builtin.debug:
       msg: "{{ec2_instances}}"
 
-  - name: r53 record creation for peivate ip address
+  - name: r53 record creation for private ip address
     amazon.aws.route53:
       state: present
       zone: "{{zone_id}}"
